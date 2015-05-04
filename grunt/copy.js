@@ -14,5 +14,13 @@ module.exports = {
             dest: '<%= config.dist %>/assets/images',
             expand: true
         }]
+    },
+    js: {
+        files: [{
+            cwd: '<%= config.src %>/assets/js/vendors',
+            src: '*.js',
+            dest: '<%= config.dist %>/assets/js',
+            expand: true
+        }]
     }
 };

@@ -22,6 +22,7 @@ module.exports = function(grunt) {
         'sass',
         'copy:images',
         'copy:fonts',
+        'copy:js',
         'assemble',
         'clean:post',
         'webpack-dev-server',
@@ -36,6 +37,7 @@ module.exports = function(grunt) {
         'sass',
         'copy:images',
         'copy:fonts',
+        'copy:js',
         'assemble',
         'webpack:prod',
         'clean:post'

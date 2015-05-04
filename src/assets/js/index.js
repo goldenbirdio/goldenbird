@@ -1,1 +1,2 @@
-var jquery = require('jquery');
+require('expose?$!jquery');
+require('expose?jQuery!jquery');
