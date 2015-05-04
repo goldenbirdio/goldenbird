@@ -10,7 +10,7 @@ module.exports = {
         },
         files: [
             {
-                src: '<%= config.src %>/assets/css/brooklyn.scss',
+                src: '<%= config.src %>/assets/css/styles.scss',
                 dest: '<%= config.dist %>/assets/css/main.css'
             }
         ]
