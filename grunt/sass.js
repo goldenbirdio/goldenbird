@@ -6,15 +6,11 @@ module.exports = {
             cacheLocation: '<%= config.temp %>/.sass-cache',
             precision: 3,
             style: 'collapsed',
-            sourcemap: 'file',
-            compass: true
-            //loadPath: [
-            //    path.join(process.cwd(), 'node_modules/lego/src/scss/')
-            //]
+            sourcemap: 'file'
         },
         files: [
             {
-                src: '<%= config.src %>/assets/css/styles.scss',
+                src: '<%= config.src %>/assets/css/brooklyn.scss',
                 dest: '<%= config.dist %>/assets/css/main.css'
             }
         ]

@@ -20,6 +20,7 @@ module.exports = function(grunt) {
         'clean:pre',
         'jshint:dev',
         'sass',
+        'copy:images',
         'assemble',
         'clean:post',
         'webpack-dev-server',
@@ -32,6 +33,7 @@ module.exports = function(grunt) {
         'clean:pre',
         'jshint:prod',
         'sass',
+        'copy:images',
         'assemble',
         'webpack:prod',
         'clean:post'

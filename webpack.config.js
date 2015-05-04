@@ -68,8 +68,8 @@ exports.dev = {
             { test: /\.jsx?/, exclude: excludedDirs, loader: 'jsxhint-loader' }
         ],
         loaders: [
-            { test: /\.jsx$/, exclude: excludedDirs, loaders: [ 'react-hot', '6to5-loader' ]},
             { test: /\.js$/, exclude: excludedDirs, loaders: [ 'react-hot', '6to5-loader' ]},
+            { test: /\.jsx$/, exclude: excludedDirs, loaders: [ 'react-hot', '6to5-loader' ]},
             { test: /\.hbs$/, loader: 'handlebars-loader?helperDirs[]=' + __dirname + '/src/helpers' }
         ]
     },
