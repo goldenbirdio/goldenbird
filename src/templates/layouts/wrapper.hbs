@@ -12,11 +12,7 @@
         <a id="top"></a>
 
         {{> header}}
-        {{> hero}}
-
-        <div id="main-content">
-            {% body %}
-        </div>
+        {% body %}
 
         {{#is this.environment "dev"}}
             <script src="../assets/js/server.bundle.js" defer></script>
