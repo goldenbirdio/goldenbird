@@ -11,45 +11,8 @@
     <body>
         <a id="top"></a>
 
-        <!-- header section -->
-        <header id="header-section" class="ha-header ha-header-hide">
-            <div class="grid-container">
-                <div class="ha-header-perspective">
-                    <div class="ha-header-front">
-                        <div class="grid-20 tablet-grid-20 hide-on-mobile">
-                            <h1 class="logo"><a href="#top"><img src="../assets/images/logo.png" alt="logo"></a></h1>
-                        </div>
-                        <nav id="ut-navigation" class="grid-80 tablet-grid-80 hide-on-mobile">
-                            <a class="selected" href="#top">Home</a>
-                            <a href="#about-section">About</a>
-                            <a href="#team-section">Team</a>
-                            <a href="#service-section">Service</a>
-                            <a href="#portfolio-section">Work</a>
-                            <a href="#testimonial-section">Clients</a>
-                            <a href="#contact-section">Contact</a>
-                        </nav>
-                    </div>
-                </div><!-- close .ha-header-perspective -->
-            </div><!-- close grid container -->
-        </header><!-- close header -->
-        <div class="clear"></div>
-
-        <!-- hero section -->
-        <section class="hero ha-waypoint parallax-section parallax-banner-1 parallax-background" data-animate-up="ha-header-hide" data-animate-down="ha-header-hide">
-            <div class="parallax-overlay parallax-overlay-1"></div>
-            <div class="grid-container">
-
-                <!-- hero holder -->
-                <div class="hero-holder grid-70 mobile-grid-100 tablet-grid-100">
-                    <div class="hero-inner">
-                        <span class="hero-description">Creative Agency - Professional Photographer - Web Development</span>
-                        <div class="hero-title-holder"><h1 class="hero-title">We are <span>Goldenbird</span></h1></div>
-                        <span class="btn-holder"><a id="to-about-section" class="hero-btn">What We Do</a></span>
-                    </div>
-                </div><!-- close hero-holder -->
-            </div>
-        </section><!-- close hero section -->
-        <div class="clear"></div>
+        {{> header}}
+        {{> hero}}
 
         <div id="main-content">
             {% body %}

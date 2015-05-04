@@ -14,7 +14,10 @@ var plugins = [
     new webpack.ContextReplacementPlugin(/.*$/, /a^/),
 
     new webpack.ProvidePlugin({
-        'angular': 'exports?window.angular!bower/angular'
+        $: 'jquery',
+        jQuery: 'jquery',
+        'window.jquery': 'jquery',
+        'root.jQuery': 'jquery'
     })
 ];
 var devPlugins = [
@@ -64,12 +67,8 @@ exports.dev = {
         insertPragma: 'React.DOM'
     },
     module: {
-        preLoaders: [
-            { test: /\.jsx?/, exclude: excludedDirs, loader: 'jsxhint-loader' }
-        ],
         loaders: [
             { test: /\.js$/, exclude: excludedDirs, loaders: [ 'react-hot', '6to5-loader' ]},
-            { test: /\.jsx$/, exclude: excludedDirs, loaders: [ 'react-hot', '6to5-loader' ]},
             { test: /\.hbs$/, loader: 'handlebars-loader?helperDirs[]=' + __dirname + '/src/helpers' }
         ]
     },
@@ -80,7 +79,8 @@ exports.dev = {
             path.join(__dirname, '/src/assets/js/global')
         ],
         alias: {
-            bower: path.join(__dirname, 'bower_components')
+            bower: path.join(__dirname, 'bower_components'),
+            'jquery': path.join(__dirname, '/src/assets/js/vendors/jquery.min.js')
         }
     },
     plugins: plugins.concat(devPlugins),
@@ -102,11 +102,7 @@ exports.prod = {
         insertPragma: 'React.DOM'
     },
     module: {
-        preLoaders: [
-            { test: /\.jsx?/, exclude: excludedDirs, loader: 'jsxhint-loader' }
-        ],
         loaders: [
-            { test: /\.jsx$/, exclude: excludedDirs, loader: '6to5-loader' },
             { test: /\.js$/, exclude: excludedDirs, loader: '6to5-loader' },
             { test: /\.hbs$/, loader: 'handlebars-loader?helperDirs[]=' + __dirname + '/src/helpers' }
         ]
@@ -118,7 +114,8 @@ exports.prod = {
             path.join(__dirname, '/src/assets/js/global')
         ],
         alias: {
-            bower: path.join(__dirname, 'bower_components')
+            bower: path.join(__dirname, 'bower_components'),
+            'jquery': path.join(__dirname, '/src/assets/js/vendors/jquery.min.js')
         }
     },
     plugins: plugins.concat(prodPlugins)
