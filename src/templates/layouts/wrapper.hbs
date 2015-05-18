@@ -4,14 +4,31 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
         <title>{{title}}</title>
+        <script src="//cdn.optimizely.com/js/2835880417.js"></script>
 
-        <link rel="stylesheet" href="../assets/css/main.css">
+        <link rel="stylesheet" href="../assets/css/reset.css" media="all">
+        <link rel="stylesheet" href="../assets/css/ut-fontface.css" media="all">
+        <link rel="stylesheet" href="../assets/css/font-awesome.css" media="all">
+        <link rel="stylesheet" href="../assets/css/flexslider.css" media="all">
+        <link rel="stylesheet" href="../assets/css/magnific-popup.css" media="all">
+        <link rel="stylesheet" href="../assets/css/ut-responsive-grid.css" media="all">
+        <link rel="stylesheet" href="../assets/css/color.css" media="all">
+        <link rel="stylesheet" href="../assets/css/style.css" media="all">
+
+        <!--[if lt IE 9]>
+        <script src="../assets/js/html5.js"></script>
+        <![endif]-->
+
+        <!--[if IE]>
+        <link rel="stylesheet" type="text/css" href="../assets/css/ie.css" />
+        <![endif]-->
+
         <script src="../assets/js/jquery.min.js"></script>
         <script src="../assets/js/SmoothScroll.js"></script>
         <script src="../assets/js/modernizr.js"></script>
         <script src="../assets/js/device.min.js"></script>
     </head>
-    <body>
+    <body id="mainsite">
         <a id="top"></a>
 
         {{> header}}
@@ -25,7 +42,6 @@
         {{#if this.page_script}}
             <script src="../assets/js/{{this.page_script}}" defer></script>
         {{/if}}
-        {{> footer}}
         {{> vendor_scripts}}
     </body>
 </html>

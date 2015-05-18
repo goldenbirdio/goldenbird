@@ -1,4 +1,12 @@
 module.exports = {
+    css: {
+        files: [{
+            cwd: '<%= config.src %>/assets/css',
+            src: '*.css',
+            dest: '<%= config.dist %>/assets/css',
+            expand: true
+        }]
+    },
     fonts: {
        files: [{
            cwd: '<%= config.src %>/assets/css/fonts',

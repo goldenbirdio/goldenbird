@@ -78,6 +78,31 @@
 			
 		});
 		
+		/* YouTube Background Video
+		================================================== */
+		/* only play video on desktop devices */
+		if( !device.tablet() && !device.mobile() ) {
+			
+			$(".player").mb_YTPlayer();
+						
+		} else {
+			
+			/* as a fallback we add a special class to the header which displays a poster image */ 
+			$('.hero').addClass('hero-poster-image');
+			
+			/* re attach the inital background image classes from index.html */
+			$('#parallax-section-2').addClass('parallax-banner-2');			
+			$('#service-section').addClass('parallax-banner-3');
+			$('#social-section').addClass('parallax-banner-4');
+			$('#contact-section').addClass('parallax-banner-5');
+			$('#counter-section').addClass('parallax-banner-6');
+			
+			/* hide player */
+			$(".player").hide();
+			
+		}
+		
+		
 		/* Parallax Effect - disabled for mobile devices
 		================================================== */	
 		if( !device.tablet() && !device.mobile() ) {
@@ -207,6 +232,46 @@
 			preloader: false,	
 			fixedContentPos: false
 		});
+		
+		
+		/* Flexslider with Video
+		================================================== */
+		
+		/*$(window).load(function(){
+			
+			// Vimeo API nonsense
+		  	var player = document.getElementById('player_1');
+		  	$f(player).addEvent('ready', ready);
+		  
+			function addEvent(element, eventName, callback) {
+				(element.addEventListener) ? element.addEventListener(eventName, callback, false) : element.attachEvent(eventName, callback, false);
+			}
+			
+			function ready(player_id) {
+				var froogaloop = $f(player_id);
+			  
+				froogaloop.addEvent('play', function(data) {
+				  $('.flexslider').flexslider("pause");
+				});
+				
+				froogaloop.addEvent('pause', function(data) {
+				  $('.flexslider').flexslider("play");
+				});
+			}
+			
+			$('.flexslider').fitVids().flexslider({
+				animation: "slide",
+				controlNav: "thumbnails",
+				smoothHeight: true,
+				start: function(slider){
+			  		$('body').removeClass('loading');
+				},
+				before: function(slider){
+					$f(player).api('pause');
+			  	}
+		  	});
+			
+		}); */
 		
 		/* Flexslider without Video
 		================================================== */

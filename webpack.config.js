@@ -79,8 +79,7 @@ exports.dev = {
             path.join(__dirname, '/src/assets/js/global')
         ],
         alias: {
-            bower: path.join(__dirname, 'bower_components'),
-            'jquery': path.join(__dirname, '/src/assets/js/vendors/jquery.min.js')
+            bower: path.join(__dirname, 'bower_components')
         }
     },
     plugins: plugins.concat(devPlugins),
@@ -114,8 +113,7 @@ exports.prod = {
             path.join(__dirname, '/src/assets/js/global')
         ],
         alias: {
-            bower: path.join(__dirname, 'bower_components'),
-            'jquery': path.join(__dirname, '/src/assets/js/vendors/jquery.min.js')
+            bower: path.join(__dirname, 'bower_components')
         }
     },
     plugins: plugins.concat(prodPlugins)
