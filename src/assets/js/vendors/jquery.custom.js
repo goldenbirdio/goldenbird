@@ -55,11 +55,11 @@
 			] ,
 			counter = 0;                
 			
-			setInterval(function() {
-			$(".hero-title").fadeOut(function(){
-					$(this).html(ut_rotator_words[counter=(counter+1)%ut_rotator_words.length]).fadeIn();
-				});
-			}, 3000 );
+			//setInterval(function() {
+			//$(".hero-title").fadeOut(function(){
+			//		$(this).html(ut_rotator_words[counter=(counter+1)%ut_rotator_words.length]).fadeIn();
+			//	});
+			//}, 3000 );
 		}
 		
 		ut_word_rotator();

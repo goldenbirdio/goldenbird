@@ -3,10 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-        <title>{{title}} | {{site.title}}</title>
+        <title>{{title}}</title>
 
         <link rel="stylesheet" href="../assets/css/main.css">
-
+        <script src="../assets/js/jquery.min.js"></script>
+        <script src="../assets/js/SmoothScroll.js"></script>
+        <script src="../assets/js/modernizr.js"></script>
+        <script src="../assets/js/device.min.js"></script>
     </head>
     <body>
         <a id="top"></a>
@@ -22,6 +25,7 @@
         {{#if this.page_script}}
             <script src="../assets/js/{{this.page_script}}" defer></script>
         {{/if}}
+        {{> footer}}
         {{> vendor_scripts}}
     </body>
 </html>
