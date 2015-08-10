@@ -345,7 +345,7 @@
 		
 
 		/* form processing */
-		$("#contact-form").submit(function(){
+		/*$("#contact-form").submit(function(){
 			
 			$(this).find('[placeholder]').each(function() {
 				
@@ -356,14 +356,14 @@
 				
 			});
 			
-			var processor = "contact.php",
+			var processor = "https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8",
 				str = $(this).serialize();
 			
 			$("#contact-form .success-message, #contact-form .alert-message, #contact-form .error-message ").hide();
 			
 			$.ajax({
-				   
 			   type: "POST",
+               crossDomain:true,
 			   url: processor,
 			   data: str,
 			   success: function(data) {
@@ -393,7 +393,7 @@
 		
 			return false;
 			
-		});
+		});*/
 		
 		
 		/* Milestone Counter
