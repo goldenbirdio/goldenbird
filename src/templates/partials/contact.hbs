@@ -21,23 +21,22 @@
                     <!-- contact form -->
                     <div class="grid-parent grid-100 mobile-grid-100 tablet-grid-100">
                         <div class="contact-form-holder clearfix">
-
-
                             <h3 class="grid-100">Drop us a line</h3>
-
                             <!-- contact form -->
-                            <form id="contact-form" class="contact-form">
-
+                            <form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" id="contact-form" class="contact-form">
+                                <input type=hidden name="oid" value="00D61000000Hmr3">
+                                <input type=hidden name="retURL" value="http://goldenbird.io/">
                                 <ul class="grid-50">
-
-                                    <li><input id="name" class="name" type="text" name="name" placeholder="Name:"></li>
-                                    <li><input id="email" class="email" type="email" name="email" placeholder="E-Mail:"></li>
-                                    <li><input id="phone" class="phone" type="text" name="phone" placeholder="Phone:"></li>
-
+                                    <li><input id="first_name" class="first_name" type="text" name="first_name" maxlength="40" placeholder="First:"></li>
+                                    <li><input id="last_name" class="last_name" type="text" name="last_name" maxlength="80" placeholder="Last:"></li>
+                                    <li><input id="title" class="title" type="text" name="title" maxlength="20" placeholder="Title:"></li>
+                                    <li><input id="company" class="company" type="text" name="company" maxlength="40" placeholder="Company:"></li>
+                                    <li><input id="email" class="email" type="email" name="email" maxlength="80" placeholder="E-Mail:"></li>
+                                    <li><input id="phone" class="phone" type="text" name="phone" maxlength="40" placeholder="Phone (Optional):"></li>
                                 </ul>
 
                                 <ul class="grid-50">
-                                    <li><textarea id="message" class="message" name="message" placeholder="Message:"></textarea></li>
+                                    <li><textarea id="description" class="description" name="description" placeholder="Message:"></textarea></li>
                                 </ul>
 
                                 <div class="grid-100">
