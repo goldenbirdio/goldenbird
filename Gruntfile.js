@@ -47,9 +47,18 @@ module.exports = function(grunt) {
         'server'
     ]);
 
-    grunt.registerTask('deploy', [
-        'build',
-        'aws_s3'
+    grunt.registerTask('dev-deploy', [
+        'config:dev',
+        'clean:pre',
+        'jshint:dev',
+        'copy:css',
+        'copy:images',
+        'copy:fonts',
+        'copy:js',
+        'assemble',
+        'webpack:dev',
+        //'aws_s3:devClear',
+        'aws_s3:dev',
+        'clean:post'
     ]);
-
 };
